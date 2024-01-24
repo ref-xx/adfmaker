@@ -1,0 +1,24 @@
+#
+# Copyright (C) 2024 Alessandro Gatti - frob.it
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+[package]
+name = "adfmaker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.79"
+chrono = "0.4.31"
+clap = { features = ["derive"], version = "4.4.18" }
+clap-verbosity-flag = "2.1.2"
+csv = "1.3.0"
+encoding = "0.2.33"
+hex = "0.4.3"
+log = "0.4.20"
+memoize = "0.4.2"
+pretty-hex = "0.4.1"
+simple_logger = "4.3.3"
+thiserror = "1.0.56"
