@@ -1,4 +1,4 @@
-name: Build Rust Project (Windows)
+name: Build adfmaker for Windows
 
 on:
   workflow_dispatch:
@@ -6,21 +6,22 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-    - name: Checkout source
+    - name: Kodu Klonla
       uses: actions/checkout@v3
 
-    - name: Install Rust
+    - name: Rust Kurulumu
       uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         override: true
 
-    - name: Build release
+    - name: Release Derlemesi
       run: cargo build --release
 
-    - name: Upload executable
+    - name: Çıktıyı Yükle
       uses: actions/upload-artifact@v3
       with:
-        name: rust-exe
-        path: target/release/*.exe
+        name: adfmaker-exe
+        path: target/release/adfmaker.exe
