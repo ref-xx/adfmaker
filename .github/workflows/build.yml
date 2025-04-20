@@ -21,7 +21,7 @@ jobs:
       run: cargo build --release
 
     - name: Çıktıyı Yükle
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: adfmaker-exe
         path: target/release/adfmaker.exe
